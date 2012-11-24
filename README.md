@@ -4,7 +4,7 @@ Complex Preferences Android - by Felipe Silvestre
 Complex Preferences is a component to android that allows the developers put objects and complex objects in SharedPreferences.
 Gson (Google Json Library) is used internally to persist objects.
 
-SharedPrefences of android is limited, only accept theses types: int,float,long,boolean,String,Set<String>. ComplexPrefences comes to improve it.
+SharedPrefences of android is limited, only accept theses types: int,float,long,boolean,String,Set String. ComplexPrefences comes to improve it.
 
 How to use:
 
