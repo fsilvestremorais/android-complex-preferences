@@ -8,7 +8,7 @@ SharedPrefences of android is limited, only accept theses types: int,float,long,
 
 How to use:
 
-You can persist your models with ComplexPreferences. The Class of object need has getters and setters!!!!! 
+You can persist your models with ComplexPreferences.
 ```java
     User user = new User();
     user.setName("Felipe");
