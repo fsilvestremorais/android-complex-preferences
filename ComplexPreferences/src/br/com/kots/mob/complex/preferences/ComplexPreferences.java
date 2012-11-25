@@ -38,6 +38,14 @@ public class ComplexPreferences {
 	}
 
 	public void putObject(String key, Object object) {
+		if(object == null){
+			throw new IllegalArgumentException("object is null");
+		}
+		
+		if(key.equals("") || key == null){
+			throw new IllegalArgumentException("key is empty or null");
+		}
+		
 		editor.putString(key, GSON.toJson(object));
 	}
 
@@ -46,13 +54,16 @@ public class ComplexPreferences {
 	}
 
 	public <T> T getObject(String key, Class<T> a) {
-		
-
+	
 		String gson = preferences.getString(key, null);
 		if (gson == null) {
 			return null;
 		} else {
-			return GSON.fromJson(gson, a);
+			try{
+				return GSON.fromJson(gson, a);
+			} catch (Exception e) {
+				throw new IllegalArgumentException("Object storaged with key " + key + " is instanceof other class");				
+			}
 		}
 	}
 		
